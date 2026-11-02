@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# TypeScript build output
+dist/
+
+# Cached / harvested crop images
+data/crops/
+
+# IDE & Editor files
+.idea/
+.vscode/
+
+# Temporary & debug files
+*.tmp
+autocrop_base64.txt
+autocrop_alt_base64.txt
+
+# OS metadata
+Thumbs.db
+Desktop.ini
+.DS_Store

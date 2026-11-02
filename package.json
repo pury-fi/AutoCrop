@@ -1,0 +1,20 @@
+{
+   "name": "autocrop-plugin",
+   "version": "1.0.0",
+   "description": "PuryFi Plugin using before-censor hook with color inversion placeholder",
+   "type": "module",
+   "main": "dist/index.js",
+   "scripts": {
+      "build": "tsc",
+      "start": "tsc && node dist/index.js"
+   },
+   "dependencies": {
+      "@pury-fi/plugin-sdk": "file:../PuryFi-Plugin-SDK",
+      "ws": "^8.18.0"
+   },
+   "devDependencies": {
+      "@types/node": "^22.0.0",
+      "@types/ws": "^8.5.10",
+      "typescript": "^5.5.0"
+   }
+}
