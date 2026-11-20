@@ -1,12 +1,15 @@
 {
-   "name": "autocrop-plugin",
+   "name": "autocrop",
    "version": "1.0.0",
-   "description": "PuryFi Plugin using before-censor hook with color inversion placeholder",
+   "description": "AutoCrop automatically collects cropped parts of images and introduces its own censor mode where collected crops are applied as censorship.",
+   "author": "0131",
    "type": "module",
    "main": "dist/index.js",
    "scripts": {
       "build": "tsc",
-      "start": "tsc && node dist/index.js"
+      "start": "node dist/index.js",
+      "dev": "tsc && node dist/index.js",
+      "package": "node scripts/package.mjs"
    },
    "dependencies": {
       "@pury-fi/plugin-sdk": "file:../PuryFi-Plugin-SDK",

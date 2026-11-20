@@ -1,3 +1,85 @@
+// =============================================================================
+// AutoCrop Configuration & Censor Mapping
+//
+// Available Body Types for 'censorMapping' and 'selectedBodyParts':
+//   FEMALEBREASTEXPOSED, FEMALEBREASTCOVERED, NIPPLEEXPOSED, NIPPLECOVERED,
+//   TUMMYEXPOSED, TUMMYCOVERED, BUTTOCKSEXPOSED, BUTTOCKSCOVERED,
+//   FEMALEGENITALIAEXPOSED, FEMALEGENITALIACOVERED, MALEGENITALIAEXPOSED,
+//   MALEGENITALIACOVERED, MALEBREASTEXPOSED, MALEBREASTCOVERED,
+//   FACEFEMALE, FACEMALE, ANUSEXPOSED, ANUSCOVERED, HANDEXPOSED, HANDCOVERED,
+//   FEETEXPOSED, FEETCOVERED, ARMPITSEXPOSED, ARMPITSCOVERED, EYE, MOUTH, SILHOUETTE
+//
+// Censor Settings:
+//   censorShape: "RECTANGLE" | "CIRCLE" | "ELLIPSE" | "HEART"
+//   censorScale: 1.0 (multiplier, e.g. 0.7 = 70%)
+//   censorRounding: 0 (%)
+//   censorFeathering: 0 (%)
+//   borderWidth: 0 (px)
+//   borderColor: "#FFFFFF" (hex)
+//   videoConsistency: "TRACKING" | "PER_BODY_PART" | "OFF"
+//   hookTimeout: 10000 (ms timeout for frame/image processing)
+// =============================================================================
 {
-  "port": 8080
+  "port": 8080,
+  "hookTimeout": 10000,
+  "selectedBodyParts": [
+    "MALEGENITALIAEXPOSED",
+    "MALEGENITALIACOVERED",
+    "FEMALEBREASTEXPOSED",
+    "FEMALEBREASTCOVERED"
+  ],
+  "storageMode": "DISK",
+  "maxPoolSize": 10000,
+  "minCropDimension": 80,
+  "maxCropDimension": 512,
+  "censorMapping": {
+    "FEMALEBREASTEXPOSED": [
+      "FEMALEBREASTCOVERED"
+    ],
+    "NIPPLEEXPOSED": [
+      "NIPPLECOVERED"
+    ],
+    "FEMALEGENITALIAEXPOSED": [
+      "FEMALEGENITALIACOVERED"
+    ],
+    "MALEGENITALIAEXPOSED": [
+      "MALEGENITALIACOVERED"
+    ],
+    "BUTTOCKSEXPOSED": [
+      "BUTTOCKSCOVERED"
+    ],
+    "TUMMYEXPOSED": [
+      "TUMMYCOVERED"
+    ],
+    "ANUSEXPOSED": [
+      "ANUSCOVERED"
+    ],
+    "MALEBREASTEXPOSED": [
+      "MALEBREASTCOVERED"
+    ],
+    "HANDEXPOSED": [
+      "HANDCOVERED"
+    ],
+    "FEETEXPOSED": [
+      "FEETCOVERED"
+    ],
+    "ARMPITSEXPOSED": [
+      "ARMPITSCOVERED"
+    ],
+    "DEFAULT": [
+      ""
+    ]
+  },
+  "censorShape": "RECTANGLE",
+  "censorScale": 1.0,
+  "censorRounding": 0,
+  "censorFeathering": 0,
+  "borderWidth": 0,
+  "borderColor": "#FFFFFF",
+  "shadowSize": 0,
+  "shadowColor": "#FFFFFF",
+  "shadowOffsetX": 0,
+  "shadowOffsetY": 0,
+  "shadowBlur": 0,
+  "videoConsistency": "TRACKING"
 }

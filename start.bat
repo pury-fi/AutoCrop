@@ -1,12 +1,12 @@
 @echo off
-title AutoCrop Plugin (PuryFi)
+title AutoCrop (PuryFi)
 cd /d "%~dp0"
 
-echo [AutoCrop] Baue und starte Plugin...
+echo [AutoCrop] Starting plugin...
 call npm start
 
 if %ERRORLEVEL% neq 0 (
     echo.
-    echo [AutoCrop] Fehler beim Ausfuehren. (Code %ERRORLEVEL%)
+    echo [AutoCrop] Execution error. (Code %ERRORLEVEL%)
     pause
 )

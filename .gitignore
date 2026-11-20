@@ -20,3 +20,6 @@ autocrop_alt_base64.txt
 Thumbs.db
 Desktop.ini
 .DS_Store
+
+# Release archives
+*.zip
